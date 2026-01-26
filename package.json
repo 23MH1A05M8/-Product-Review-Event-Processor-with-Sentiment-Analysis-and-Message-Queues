@@ -1,0 +1,20 @@
+{
+  "name": "product-review-event-processor-with-sentiment-analysis-and-message-queues",
+  "version": "1.0.0",
+  "description": "Event-driven backend service for processing product reviews",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "dotenv": "^17.2.3",
+    "pg": "^8.17.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
