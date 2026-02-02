@@ -72,7 +72,7 @@ The sentiment logic is isolated into its own module and is verified using unit t
 
 ## Database Design (PostgreSQL)
 Table Name: processed_reviews
-
+```
 CREATE TABLE IF NOT EXISTS processed_reviews (
   review_id VARCHAR(255) PRIMARY KEY,
   product_id VARCHAR(255) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS processed_reviews (
   sentiment VARCHAR(50) NOT NULL,
   processed_timestamp TIMESTAMPTZ NOT NULL
 );
-
+```
 ---
 
 ## Idempotency Strategy
@@ -146,7 +146,7 @@ After starting Docker services, initialize the schema manually:
 docker exec -it <postgres-container-name> psql -U user -d review_db
 
 Then execute:
-
+```
 CREATE TABLE IF NOT EXISTS processed_reviews (
   review_id VARCHAR(255) PRIMARY KEY,
   product_id VARCHAR(255) NOT NULL,
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS processed_reviews (
   sentiment VARCHAR(50) NOT NULL,
   processed_timestamp TIMESTAMPTZ NOT NULL
 );
-
+```
 Replace <postgres-container-name> with the actual container name shown by docker ps.
 
 ---
@@ -225,4 +225,5 @@ README.md
 This project demonstrates a production-ready, event-driven backend service featuring idempotent message processing, robust retry handling with Dead-Letter Queue support, full Docker-based containerization, and comprehensive unit and integration testing.
 
 The implementation follows real-world backend microservices best practices and fully satisfies the project requirements.
+
 
