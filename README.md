@@ -202,6 +202,7 @@ Password: guest
 
 ## PROJECT STRUCTURE
 -----------------
+```
 src/
  ├── config/
  ├── consumers/
@@ -217,10 +218,11 @@ docker-compose.yml
 .env.example
 .env
 README.md
-
+```
 ---
 
 ## Conclusion
 This project demonstrates a production-ready, event-driven backend service featuring idempotent message processing, robust retry handling with Dead-Letter Queue support, full Docker-based containerization, and comprehensive unit and integration testing.
 
 The implementation follows real-world backend microservices best practices and fully satisfies the project requirements.
+
